@@ -1,0 +1,253 @@
+.checkout-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 900px;
+    margin: 20px auto;
+    color: #333;
+}
+
+/* Light Blue Info Bar */
+.info-bar {
+    background-color: #e0f7fa;
+    padding: 15px 20px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.info-row {
+    margin-bottom: 5px;
+}
+
+.info-row span {
+    margin-right: 20px;
+}
+
+/* Card Styling */
+.checkout-card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #000000;
+    /* Bright Blue */
+    color: white;
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* Table Styling */
+.items-table {
+    
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.items-table th,
+.items-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.items-table th {
+    background-color: #000000;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Totals Alignment */
+.totals-section {
+    text-align: right;
+    margin-top: 20px;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 15px;
+}
+
+.totals-section p {
+    margin: 4px 0;
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.grand-total {
+    margin-top: 12px;
+    font-size: 1.3rem;
+    color: #0f172a;
+    font-weight: 800;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+/* Payment Method Section Styling */
+.payment-section {
+    margin-top: 30px;
+}
+
+.section-title {
+    color: #1a73e8;
+    border-bottom: 2px solid #e0f7fa;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.payment-card {
+    cursor: pointer;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 15px;
+    transition: all 0.2s ease-in-out;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.payment-card:hover {
+    border-color: #1a73e8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.payment-card.selected {
+    border-color: #1a73e8;
+    background-color: #f0f7ff;
+    box-shadow: 0 4px 12px rgba(26, 115, 232, 0.15);
+}
+
+.hidden-radio {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.payment-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.payment-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #f8fafc;
+    transition: all 0.2s;
+}
+
+.payment-card.selected .payment-icon {
+    background-color: #fff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.method-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #334155;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.payment-card.selected .method-name {
+    color: #1a73e8;
+}
+
+/* Selected Dot Badge */
+.payment-card.selected::after {
+    content: '✓';
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #1a73e8;
+    color: white;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    border: 2px solid white;
+}
+
+.pay-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.pay-btn:disabled {
+    background-color: #a5d6a7;
+    cursor: not-allowed;
+}
+
+.pay-btn:hover:not(:disabled) {
+    background-color: #43a047;
+}
+
+.payment-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+@media (max-width: 768px) {
+    .checkout-container {
+        padding: 10px;
+        margin: 0;
+    }
+    
+    .info-bar {
+        padding: 10px;
+    }
+    
+    .info-row span {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .items-table {
+        display: block;
+        overflow-x: auto;
+    }
+}

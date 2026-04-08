@@ -1,0 +1,154 @@
+.customer-select-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px;
+    z-index: 1000;
+}
+
+.customer-select-container {
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 500px;
+    overflow: hidden;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.customer-select-header {
+    background-color: #000000;
+    /* Black as per user previous edit */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.customer-select-header h2 {
+    margin: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.header-close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.type-select,
+.search-input,
+.result-select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+    background-color: white;
+    color: #333;
+}
+
+/* Light gray bg for search input matching image style often used */
+.search-input {
+    background-color: #e9ecef;
+}
+
+.type-select:focus,
+.search-input:focus,
+.result-select:focus {
+    outline: none;
+    border-color: #00BCD4;
+}
+
+.results-section {
+    margin-bottom: 24px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 10px;
+}
+
+.btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-close {
+    background-color: #6C757D;
+    /* Grey */
+    color: white;
+}
+
+.btn-close:hover {
+    background-color: #5a6268;
+}
+
+.btn-use {
+    background-color: #000000;
+    /* Black as per user previous edit */
+    color: white;
+}
+
+.btn-use:hover {
+    background-color: #333333;
+}
+
+.btn-use:disabled {
+    background-color: #000000;
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* Optional styling for options if browser supports it */
+.customer-option {
+    padding: 10px;
+}

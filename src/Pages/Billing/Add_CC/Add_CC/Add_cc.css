@@ -1,0 +1,42 @@
+.add-cc-page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px;
+    min-height: calc(100vh - 60px);
+    /* Adjust based on navbar/header height */
+    position: relative;
+}
+
+/* Override the fixed position of the modal for this specific page if needed, 
+   so it sits nicely in the layout instead of floating over everything unchecked.
+   However, the existing CSS for CompanyForm uses fixed positioning. 
+   We might want to override that here to make it feel like a page. */
+
+.add-cc-page-wrapper .company-form-modal {
+    position: static;
+    background-color: transparent;
+    height: auto;
+    width: auto;
+    padding: 0;
+    display: block;
+}
+
+.add-cc-page-wrapper .company-form-container {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .add-cc-page-wrapper {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .add-cc-page-wrapper {
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

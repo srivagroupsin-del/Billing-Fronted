@@ -1,0 +1,95 @@
+/* Main Container */
+.brand-container {
+    padding: 20px;
+    font-family: "Segoe UI", sans-serif;
+    text-align: center;
+}
+
+/* Title */
+.title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #64748b;
+    margin-bottom: 45px;
+}
+
+/* Grid */
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+/* Card */
+.brand-card {
+    position: relative;
+    background: #f7f7f7;
+    border-radius: 15px;
+    padding: 25px 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+}
+
+.brand-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Active Selected Card */
+.brand-card.active {
+    border: 2px solid #007bff;
+    background: #eef5ff;
+}
+
+/* Checkbox */
+.checkbox {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+}
+
+/* Logo */
+.brand-card img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+/* Brand Name */
+.brand-card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Save Button */
+.save-btn {
+    display: inline-block;
+    margin: 45px auto 0 auto;
+    width: 300px;
+    padding: 12px 35px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #4f6df5, #4338ca);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(79, 109, 245, 0.3);
+}
+
+.save-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 109, 245, 0.4);
+    background: linear-gradient(135deg, #4338ca, #3730a3);
+}

@@ -1,0 +1,108 @@
+.service-sales-page {
+    text-align: center;
+}
+
+.service-sales-page .title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.service-sales-page .subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Container */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Card Base */
+.card {
+    width: 380px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    background: white;
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Header */
+.card-header {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-header {
+    background: linear-gradient(135deg, #1e73be, #2c3e50);
+}
+
+.sales-header {
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+}
+
+.icon {
+    font-size: 60px;
+    color: white;
+}
+
+/* Body */
+.card-body {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.card-body h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.card-body p {
+    margin-bottom: 25px;
+    color: #555;
+    font-size: 15px;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.service-btn {
+    background-color: #1e73be;
+    color: white;
+}
+
+.service-btn:hover {
+    background-color: #155a96;
+}
+
+.sales-btn {
+    background-color: #ff512f;
+    color: white;
+}
+
+.sales-btn:hover {
+    background-color: #cc3e24;
+}

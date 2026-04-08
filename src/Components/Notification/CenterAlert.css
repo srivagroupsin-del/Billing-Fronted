@@ -1,0 +1,78 @@
+.center-alert-overlay {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.center-alert-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    min-width: 300px;
+    animation: centerAlertIn 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    background: white;
+    color: #1e293b;
+    border: 1px solid #e2e8f0;
+}
+
+.center-alert-box.success {
+    background: #ecfdf5;
+    border-color: #10b981;
+    color: #065f46;
+}
+
+.center-alert-box.delete {
+    background: #fef2f2;
+    border-color: #ef4444;
+    color: #991b1b;
+}
+
+.center-alert-box.error {
+    background: #fff1f2;
+    border-color: #f43f5e;
+    color: #9f1239;
+}
+
+.center-alert-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-alert-box.success .center-alert-icon {
+    color: #10b981;
+}
+
+.center-alert-box.delete .center-alert-icon {
+    color: #ef4444;
+}
+
+.center-alert-box.error .center-alert-icon {
+    color: #f43f5e;
+}
+
+.center-alert-message {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+@keyframes centerAlertIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Add a fade out animation that will be applied by a class if needed, or just let it unmount */

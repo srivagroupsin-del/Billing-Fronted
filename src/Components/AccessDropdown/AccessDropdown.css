@@ -1,0 +1,88 @@
+.access-dropdown-container {
+    width: 100%;
+    max-width: 350px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #334155;
+}
+
+.access-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #475569;
+}
+
+.access-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.access-select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #1e293b;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.access-select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.chips-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.access-chip {
+    display: flex;
+    align-items: center;
+    background-color: #f1f5f9;
+    color: #334155;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.1s ease;
+}
+
+.access-chip:hover {
+    background-color: #e2e8f0;
+}
+
+.remove-chip-btn {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    margin-left: 6px;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    transition: color 0.2s;
+}
+
+.remove-chip-btn:hover {
+    color: #ef4444;
+}
+
+.no-selection-text {
+    font-size: 13px;
+    color: #94a3b8;
+    font-style: italic;
+    margin-top: 4px;
+}

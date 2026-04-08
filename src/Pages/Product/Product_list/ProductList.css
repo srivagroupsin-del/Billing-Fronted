@@ -1,0 +1,294 @@
+.product-list-container {
+    padding: 20px;
+    background-color: #f4f7f6;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+}
+
+.list-card {
+    background: #fff;
+    width: 100%;
+    margin-top: 50px;
+    max-width: 1200px;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.list-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.add-new-btn {
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.add-new-btn:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-1px);
+}
+
+/* Search Section */
+.search-section {
+    display: flex;
+    gap: 20px;
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border: 1px solid #e2e8f0;
+}
+
+.search-group, .show-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.search-group {
+    flex: 1;
+}
+
+.search-group label, .show-group label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #475569;
+    letter-spacing: 0.5px;
+}
+
+.search-group input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+    background-color: #ffffff;
+}
+
+.search-group input:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+}
+
+.show-group select {
+    padding: 10px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+    min-width: 80px;
+}
+
+.show-group select:focus {
+    border-color: #0d6efd;
+}
+
+/* Table Styles */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    background-color: #fff;
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.product-table th {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: left;
+    padding: 14px 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.product-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #efefef;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.product-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.product-name-cell {
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.action-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 14px;
+}
+
+.edit-btn {
+    background-color: transparent;
+    border: 1px solid #0d6efd;
+    color: #0d6efd;
+}
+
+.edit-btn:hover {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+.delete-btn {
+    background-color: transparent;
+    border: 1px solid #dc3545;
+    color: #dc3545;
+}
+
+.delete-btn:hover {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.no-data {
+    text-align: center !important;
+    padding: 40px !important;
+    color: #888;
+    font-style: italic;
+}
+
+/* Pagination Footer */
+.pagination-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.pagination-info {
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.go-to-page {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.go-to-page span {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.go-to-page input {
+    width: 60px;
+    padding: 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e293b;
+    outline: none;
+}
+
+.page-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.page-nav-btn, .page-num-btn {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.page-num-btn.active {
+    background-color: #2e3b8e;
+    border-color: #2e3b8e;
+    color: #fff;
+}
+
+.page-nav-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.page-nav-btn:hover:not(:disabled), .page-num-btn:hover:not(.active) {
+    border-color: #1e293b;
+    background-color: #f8fafc;
+}
+
+.pagination-ellipsis {
+    margin: 0 4px;
+    color: #64748b;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+
+    .product-table th,
+    .product-table td {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+}
