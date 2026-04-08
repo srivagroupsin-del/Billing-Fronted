@@ -13,7 +13,6 @@ const StorageSelection = ({ onSelectionChange, initialData }: Props) => {
     const [selections, setSelections] = useState<any>(initialData || {});
     const [loading, setLoading] = useState(false);
     const [levelOptions, setLevelOptions] = useState<Record<number, any[]>>({});
-    const [selectedParent, setSelectedParent] = useState<any>(null);
     const [allLocations, setAllLocations] = useState<any[]>([]);
     const [selectedRowColGroup, setSelectedRowColGroup] = useState<any>(null);
 
@@ -45,7 +44,6 @@ const StorageSelection = ({ onSelectionChange, initialData }: Props) => {
                 setSelections(newSel);
                 onSelectionChange(newSel);
                 setLevelOptions({});
-                setSelectedParent(null);
                 setSelectedRowColGroup(null);
             }
 
@@ -68,7 +66,7 @@ const StorageSelection = ({ onSelectionChange, initialData }: Props) => {
         }
     }, [selections.storage]);
 
-    const handleLevelSelect = async (levelId: number, levelOrder: number, value: string) => {
+    const handleLevelSelect = async (levelOrder: number, value: string) => {
         const newSel = { ...selections, [`level_${levelOrder}`]: value };
 
         levels.filter(l => l.level_order > levelOrder).forEach(l => {
@@ -77,10 +75,6 @@ const StorageSelection = ({ onSelectionChange, initialData }: Props) => {
                 setSelectedRowColGroup(null);
             }
         });
-
-        const currentOptions = levelOptions[levelId] || [];
-        const selectedNode = currentOptions.find(n => String(n.id) === String(value));
-        setSelectedParent(selectedNode);
 
         setSelections(newSel);
         onSelectionChange(newSel);
@@ -168,7 +162,7 @@ const StorageSelection = ({ onSelectionChange, initialData }: Props) => {
                                                     className="sm-select"
                                                     value={selections[`level_${level.level_order}`] || ""}
                                                     onChange={(e) => {
-                                                        handleLevelSelect(level.id, level.level_order, e.target.value);
+                                                        handleLevelSelect(level.level_order, e.target.value);
                                                     }}
                                                     disabled={!selectedRowColGroup || loading}
                                                     style={{ paddingLeft: '2.75rem' }}
@@ -192,7 +186,7 @@ const StorageSelection = ({ onSelectionChange, initialData }: Props) => {
                                         <select
                                             className="sm-select"
                                             value={selections[`level_${level.level_order}`] || ""}
-                                            onChange={(e) => handleLevelSelect(level.id, level.level_order, e.target.value)}
+                                            onChange={(e) => handleLevelSelect(level.level_order, e.target.value)}
                                             disabled={loading || (index > 0 && !selections[`level_${levels[index - 1].level_order}`])}
                                             style={{ paddingLeft: '2.75rem' }}
                                         >
